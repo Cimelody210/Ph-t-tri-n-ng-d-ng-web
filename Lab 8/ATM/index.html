@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form method ="post">
+        Please Enter Your Pin Number:
+        <input type="text" name="number" id="number" />
+        <input type="button" name="submit" id="submit" onclick="getaction()" value="go"/>
+
+        <p id="demo"></p>
+        
+        <div id="options12" >
+            <input type='radio' name='radio' onclick='myfunction(this.value)' value='1'/><span>Số dư</span>
+            <input type='radio' name='radio' onclick='myfunction(this.value)' value='2'/><span>Số tiền rút</span>
+            <input type='radio' name='radio' onclick='myfunction(this.value)' value='3'/><span>Tiền mặt nhanh chóng</span>
+        </div>
+        <p id="demo1",></p>
+        
+        <div id="display" style="display:none;">
+            <label>Please Enter Your Withdraw Amount</label>
+            <input type="text" name="amount1" id="amount1" value=""/>
+            <input type="submit" name="submit1" value="submit" onclick="getamount()"/>
+        </div>
+        
+        <div id="display1" style="display:none;">
+            <label>Please Select Your Fastcash Option</label>
+            <select id="myselect1">
+                <option value="10000">10000</option>
+                <option value ="20000">20000</option>
+                <option value ="50000">50000</option>
+            </select>
+            <input type="submit" name="submit2" value="submit" onclick="getamount1()">
+        </div>
+    </form>
+    <script src="/ATM/index.js"></script>
+</body>
+</html>
